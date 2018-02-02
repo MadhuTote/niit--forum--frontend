@@ -1,0 +1,44 @@
+
+					
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>suggested user</h2>
+					
+					
+					</div>
+					<div class="col-md-10">
+						<br>
+						<h2 class="text-center p-10 border-radius-10"> List Of Suggested Friends</h2><br>
+						<div class="container p-0">
+							<div class="row mb-20">
+								<div class="col-md-4 col-sm-4 mb-10" ng-repeat="user in suggestedusers">
+									<div class="col-md-12 p-5 box-shadow">
+										<div class="col-md-5">
+											<img src="http://localhost:8081/studentforumbackend/getimage/{{user.username}}" alt="" onerror="this.src='images/user2.png'" width="150" class="img-responsive img-circle">
+										</div>
+										<div class="col-md-7 pb-10">
+											<b>{{user.firstname}}&nbsp; {{user.lastname}} </b><br>
+											<b>Online:-</b>&nbsp;<b ng-if="user.online">Yes</b><b ng-if="!user.online"></b>No<br>
+											<b>Role:-</b>&nbsp;{{user.role}}<br><br>
+											<button type="button" ng-click="friendRequest(user.username)" class="btn btn-sm btn-primary">Add Friend</button>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+		

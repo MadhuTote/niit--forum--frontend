@@ -1,0 +1,43 @@
+
+					
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> My friend </h2>
+				
+					<div class="col-md-10">
+						<br>
+						<h2 class="text-center p-10 border-radius-10">My Friends</h2><br>
+						<div class="container p-0">
+							<div class="row mb-20">
+								<div class="col-md-4 col-sm-4 mb-10" ng-repeat="friend in friends">
+									<div class="col-md-12 p-5 box-shadow">
+										<div class="col-md-5">
+										  	<img src="http://localhost:8081/studentforumbackend/getimage/{{friend.fromId}}" alt="" onerror="this.src='images/user2.png'"
+											                     ng-hide="friend.fromId==currentUser.username" width="150" class="img-responsive img-circle"> 
+											<img src="http://localhost:8081/studentforumbackend/getimage/{{friend.toId}}" alt="" onerror="this.src='images/user2.png'"
+											                     ng-hide="friend.toId==currentUser.username" width="150" class="img-responsive img-circle">                     
+										</div>
+										<div class="col-md-7 pb-10">
+											<b ng-hide="friend.fromId==currentUser.username">{{friend.fromId}}</b><b ng-hide="friend.toId==currentUser.username">{{friend.toId}}</b><br><br>
+											<button type="button" a href="#/chat" class="btn btn-sm btn-primary">Message</button>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			

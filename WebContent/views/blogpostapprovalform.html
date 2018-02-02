@@ -1,0 +1,42 @@
+
+					<div class="col-md-10">
+						
+						
+						<div class="container">
+							<div class="col-md-2 hidden-sm">
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+								<h2 class="text-center mb-20"> Pending Blogs</h2>
+									<div class="media p-20 bg-bluish">
+									  
+									  <div class="media-body">
+										<h5 class="media-heading yellow letter-spacing "><b>{{blogPost.blogTitle}}</b></h5>
+										<p class="mt-10"><span class="yellow">Posted By :</span>{{blogPost.postedBy.username}} &nbsp;<span class="yellow">On :</span>{{blogPost.postedOn | date:'medium'}}</p>
+										<p class="mt-10">{{blogPost.description}}</p>
+									<!--  	<a href=""  class="btn btn-success" ng-click="updateBlogPost(true)">Approve</a>&nbsp;&nbsp;
+										<a href="" class="btn btn-danger" ng-click="updateBlogPost(false)">Reject</a>-->
+										<div class="form-group">
+										<label class="radio-inline" style=color:lightGreen >
+												<input type="radio"  ng-model="blogPost.approved"  value="true" name="optradio">Approve
+										</label>
+										<label class="radio-inline" style=color:Red>
+												<input type="radio"  ng-model="blogPost.approved" value="false" name="optradio">Reject
+										</label>
+										<label class="radio-inline">
+										    <input type="submit" ng-click="updateBlogPost()"  id="register-submit" tabindex="4" class="form-control btn btn-success"  value="Submit">
+										</label>
+										</div>
+									  </div>
+									</div>
+							</div>
+							<div class="col-md-2 hidden-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			

@@ -1,0 +1,42 @@
+
+					
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2> pending request</h2>
+				s
+					<div class="col-md-10">
+						<br>
+						<h2 class="text-center p-10 border-radius-10">Pending Requests</h2><br>
+						<div class="container p-0">
+							<div class="row mb-20">
+								<div class="col-md-4 col-sm-4 mb-10" ng-repeat="pendingRequest in pendingrequests">
+									<div class="col-md-12 p-5 box-shadow">
+										<div class="col-md-5">
+											<img src="http://localhost:8081/studentforumbackend/getimage/{{pendingRequest.fromId}}" alt="" onerror="this.src='images/user2.png'" width="150" class="img-responsive img-circle">
+										</div>
+										<div class="col-md-7 pb-10">
+											<b>{{pendingRequest.fromId}}</b><br><br>
+											<button type="button" ng-click="updatePendingRequest(pendingRequest,'A')" class="btn btn-success btn-xs">Accept</button>&nbsp;&nbsp;
+											<button type="button" ng-click="updatePendingRequest(pendingRequest,'D')" class="btn btn-danger btn-xs">Reject</button>
+										</div>
+									</div>
+								</div>
+								
+								
+								
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+			

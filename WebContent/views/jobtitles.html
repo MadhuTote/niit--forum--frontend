@@ -1,0 +1,108 @@
+
+					<div class="col-md-9">
+						<div class="container">
+						
+							
+								
+								<div class="row">
+									<div class="col-md-3 ">
+									<h2 >JOB DETAILS</h2>
+									</div>
+										
+									<div class="col-md-6 ">
+										<!--<div class="input-group">
+											<input ng-model="searchText" class="form-control" placeholder="Search for Jobs...">
+											  <span class="input-group-btn">
+												<button class="btn btn-search"><i class="fa fa-search fa-fw"></i> </button>
+											  </span>
+										</div> -->
+										<div class="input-group">
+										
+											<form  role="search" class="search-form">
+													 <input type="submit" value="" class="search-submit"> 
+													<input ng-model="searchText" name="q" class="search-text" placeholder="Search for Jobs..." autocomplete="off">
+											</form>
+										</div>
+										
+									</div>
+									
+							    </div>
+								<div class="p-10"></div>
+								<div class="row">
+									<div class="col-md-11">
+										 <div class="table-responsive">          
+											  <table class="table table-striped">
+												<thead>
+												  <tr>
+													<th>Job Title</th>
+													<th>Company Name</th>
+													<th>Posted On</th>
+													<th ng-show="currentUser.role=='ADMIN'">Update</th>
+													<th ng-show="currentUser.role=='ADMIN'">Delete</th>
+													
+												  </tr>
+												</thead>
+												<tbody>
+												  <tr ng-repeat = "job in jobs | filter : searchText">	
+													<td><a href = "" ng-click = "getJobDetails(job.id)"><b>{{job.jobTitle}}</b></a></td>
+													<td>{{job.companyname}}</td>
+													<td>{{job.postedOn | date : "dd MMMM yyyy"}}</td>
+													<td ng-show="currentUser.role=='ADMIN'"><a href="#/updatejob/{{job.id}}"> <span class="glyphicon glyphicon-edit"></span></a></td>
+													<td ng-show="currentUser.role=='ADMIN'"><a href="" ng-click = "deleteJob(job.id)"><span class="glyphicon glyphicon-trash"></span></a></td>
+													
+													
+												  </tr>
+										</tbody>
+											  </table>
+										 </div>
+									</div>
+								</div>
+								
+								
+								<div class="row mt-50" ng-show = "showJobDetails">
+									<div class="col-md-11">
+									   <h2 align = "center"><b>Job Details</b></h2>
+										 <div class="table-responsive">          
+											  <table class="table table-striped">
+											    <tr>
+                                                         <td><h5><b>Job Title &nbsp;:-</b></h5></td><td>{{job.jobTitle}}</td>
+											      </tr>
+											         <tr>
+                                                         <td><h5><b>Name of the Company &nbsp;:-</b></h5></td><td>{{job.companyname}}</td>
+											      </tr>
+											       <tr>
+                                                        <td><h5><b>Job Description &nbsp;:-</b></h5></td><td>{{job.jobDescription}}</td>
+											      </tr>
+											       <tr>
+                                                         <td><h5><b>Required Skills &nbsp;:-</b></h5></td><td>{{job.skillRequired}}</td>
+											      </tr>
+											       <tr>
+                                                         <td><h5><b>Experience Required  &nbsp;:-</b></h5></td><td>{{job.yrsOfExp}}</td>
+											      </tr>
+											       <tr>
+                                                         <td><h5><b>Salary  &nbsp;:-</b></h5></td><td>{{job.salary}}</td>
+											      </tr>
+											       <tr>
+                                                        <td><h5><b>Location  &nbsp;:-</b></h5></td><td>{{job.location}}</td>
+											      </tr>
+											       <tr>
+                                                         <td><h5><b>Posted On  &nbsp;:-</b></h5></td><td>{{job.postedOn | date : "dd MMMM yyyy"}}</td>
+											      </tr>
+											     
+					                        </table>
+					                         <div class="col-sm-6 col-sm-offset-3" ng-hide="currentUser.role=='ADMIN'">
+													<input type="submit" ng-click="applyJob(job.id)"  id="register-submit" tabindex="4" class="btn btn class btn btn-success"  value="Apply">
+										  
+										    </div>
+										 </div>
+									</div>
+								</div>
+							
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			
+		

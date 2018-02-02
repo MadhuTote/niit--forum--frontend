@@ -1,0 +1,29 @@
+
+					<div class="col-md-10 p-0">
+						<img src="images/blogging.png" class="img-responsive">
+						
+						<div class="container">
+							<div class="col-md-2 hidden-sm">
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+								<h2 class="text-center mb-20"> View Blogs</h2>
+									<div class="media p-20 bg-bluish" ng-repeat="blog in blogPostsApproved">
+									  
+									  <div class="media-body">
+									    <a href="#/getblogpostbyid/{{blog.id}}"><h2 class="media-heading yellow">{{blog.blogTitle}}</h2></a>
+										<p class="mt-20"><span class="yellow">Posted By : &nbsp;</span>{{blog.postedBy.username}} &nbsp;<span class="yellow">On : &nbsp;</span> {{blog.postedOn | date:"dd MMMM yyyy"}}</p>
+									  </div>
+									</div>
+									
+									
+							</div>
+							<div class="col-md-2 hidden-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			

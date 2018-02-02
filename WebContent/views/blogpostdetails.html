@@ -1,0 +1,48 @@
+
+					<div class="col-md-10">
+						
+						<div class="container">
+							<div class="col-md-2 hidden-sm">
+							</div>
+							
+							<div class="col-md-8 col-sm-12">
+								<h4 class="text-center p-10 border-radius-10">{{blogPost.blogTitle}}</h4>
+								<div class="mt-20">
+									<p class="mt-10"><span class="blue"><b>Created By :&nbsp;</b></span>{{blogPost.postedBy.username}} &nbsp;<span class="blue"><b>On :&nbsp;</b></span>{{blogPost.postedOn | date:'medium'}}</p>
+								     <p class="mb-20">{{blogPost.description}}</p>	
+								   
+									
+									<a ng-click="getComments()"><b>Show All Comments</b></a>
+								   <div class="mt-50 bg-yellow" ng-show="showcomments">
+								    
+										<div class="media p-20 bg-bluish" ng-repeat="blogComment in blogComments">
+									  
+										  <div class="media-body">
+											<h5 class="media-heading yellow"><span class="pull-left">{{blogComment.commentedBy.username}}</span><span class="yellow pull-right" >{{blogComment.commentedOn | date: 'MM/dd/yyyy'}}</span></h5>
+											
+											<p class="mt-40">{{blogComment.commentText}}</p>											
+										  </div>
+									</div>
+							      </div><br><br>
+							   
+									<form>
+										<div class="form-group">
+													  <label>Comments :</label>
+													  <textarea class="form-control" rows="3" id="comment" ng-model="blogComment.commentText" placeholder="Post Your Comment here"></textarea>
+										</div>
+										<div class="form-group ">
+											<input type="submit" ng-click="addComment()" class="btn btn-primary" value="Post">
+									   </div>	
+									</form>
+									
+								</div>
+							</div>
+							<div class="col-md-2 hidden-sm">
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			
+			</div>
+			
